@@ -10,6 +10,7 @@ $show_alert = false;
 
 include_once __DIR__ .'/functions.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
