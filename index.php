@@ -9,6 +9,7 @@ $alert_message = '';
 $show_alert = false;
 
 include_once __DIR__ .'/functions.php';
+[$show_alert,$alert_class,$alert_message]=showAlert($user_email);
 ?>
 
 <!DOCTYPE html>
