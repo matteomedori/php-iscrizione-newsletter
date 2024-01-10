@@ -1,11 +1,16 @@
 <?php
 
-// user_mail salva la mail inserita dall'utente tramite form
+require_once __DIR__ . '/session.php';
+
+// user_mail salva la mail inserita dall'utente tramite form, poi la salvo anche nella sessione
 $user_email = $_GET['email'] ?? '';
+$_SESSION['email']= $user_email;
+
 // alert_class indica la classe da dare all'alert da mostrare
 $alert_class = '';
 // $alert_message indica il messaggio da visualizzare nell'alert
 $alert_message = '';
+
 $show_alert = false;
 
 include_once __DIR__ .'/functions.php';
