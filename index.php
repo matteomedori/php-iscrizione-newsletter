@@ -6,18 +6,9 @@ $user_email = $_GET['email'] ?? '';
 $alert_class = '';
 // $alert_message indica il messaggio da visualizzare nell'alert
 $alert_message = '';
+$show_alert = false;
 
-if($user_email === ''){
-    $show_alert = false;    
-}elseif(str_contains($user_email,'@') && str_contains($user_email,'.')){
-    $show_alert = true;
-    $alert_class = 'alert-success';
-    $alert_message = 'Hai inserito una mail corretta!';
-} else {
-    $show_alert = true;
-    $alert_class = 'alert-warning';
-    $alert_message = 'Attenzione! Hai inserito una mail sbagliata! La mail non contiene un . e una @';
-}
+include_once __DIR__ .'/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
